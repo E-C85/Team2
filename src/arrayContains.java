@@ -41,6 +41,7 @@ public class arrayContains {
 
         for (int i = 0; i < 3; i++) {
             UseThisArray1[i] = myArr[i];
+
         }
 
         for (int i = 3; i < 5; i++) {
@@ -53,8 +54,23 @@ public class arrayContains {
         //  bu satirdan onceki kodlari degistirmeyiniz
         // UseThisArray1 ve UseThisArray2 array isimlerini kullanınız.
 
+        boolean result = linearIn(UseThisArray1, UseThisArray2);
+        System.out.println(result);
 
+    }
 
+    private static boolean linearIn(int[] outer, int[] inner) {
 
+        int i = 0; // index for outer array
+        int j = 0; // index for inner array
+
+        while (i < outer.length && j < inner.length) {
+            if (outer[i] == inner[j]) {
+                j++; // move to next element in inner array
+            }
+            i++; // move to next element in outer array
+        }
+
+        return j == inner.length;
     }
 }
