@@ -31,13 +31,32 @@ public class changeArray {
      */
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
-        String myStr = scan.nextLine();
-        String[] UseThisArray = myStr.split(" ");
+      //  Scanner scan = new Scanner(System.in);
+       // System.out.println(" meyve giriniz");
+       // String myStr = scan.nextLine();String[] UseThisArray = myStr.split(" ");
+      //String UseThisArray[]={"Apple","Orange","Kiwi","Peach","Orange"};
+      //System.out.println(Arrays.toString(UseThisArray)+ " ");
+      //for (int i = 0; i < UseThisArray.length ; i++) {
+      //    if(UseThisArray[i].equals("Orange ")){
+      //        UseThisArray[i]="Apple";
+      //    }
+      //}
+      // for (String meyve:UseThisArray) {
+      //     System.out.print(meyve);
+      // }
+        String[] fruits = {"Peach", "Berry", "Orange", "WaterMelon", "Orange"};
 
-       //  bu satirdan onceki kodlari degistirmeyiniz
-       // kullanman gereken -> UseThisArray
+        for (int i = 0; i < fruits.length ; i++) {
+            if (fruits[i].equals("Orange")){
+                fruits[i]="Apple";
+            }
 
+        }
+
+        for (String meyve:fruits) {
+            System.out.print(meyve+" ");
+
+        }
 
     }
 }
