@@ -29,11 +29,49 @@ public class sumTotal {
     public static void main(String[] args) {
 
         // kodu burdan baslatin ve bu satirdan onceki kodlari degistirmeyin
+        double carp1=0;
+       // double carpim=1;
+        double carp2 = 0;
 
 
-       
+        String [][] number={{"$12" , "$22" , "5$"},{"€9" , "€40" , "$1" , "$2"}, {"€12"}};
+        for (int i = 0; i < number.length; i++) {
+            for (int j = 0; j <number[i] .length; j++) {
+                if (number [i][j].contains("$")) {
+                    number[i][j]=number[i][j].replaceAll("\\D","");
+                 carp2+=Integer.parseInt( number[i][j])*3.2;
+
+
+
+                }
+            }
+
+        }
+        System.out.println(carp2);
+        String [][] number1={{"$12" , "$22" , "5$"},{"€9" , "€40" , "$1" , "$2"}, {"€12"}};
+        for (int i = 0; i < number1.length; i++) {
+            for (int j = 0; j <number[i] .length; j++) {
+                if (number [i][j].contains("€")) {
+                    number[i][j]=number[i][j].replaceAll("\\D","");
+                    carp1+=Integer.parseInt( number[i][j])*4.2;
+
+
+
+                }
+            }
+
+        }
+
+
+        System.out.println(carp1);
+
+        System.out.println(carp1+carp2);
+
+
+
     }
 }
+
 
 
 

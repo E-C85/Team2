@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -35,21 +36,37 @@ public class removeDuplicates {
     */
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+      //  Scanner scan = new Scanner(System.in);
 
-        String myStr = scan.nextLine();
+       // String myStr = scan.nextLine();
 
-        String[] arr = myStr.split(" ");
+       // String[] arr = myStr.split(" ");
 
-        int[] useThisArray = new int[arr.length];
+        int[] arr = {1,2,2,2,3,3,3,4,4,4,5,5,5};
 
-        for(int i = 0 ; i < useThisArray.length ; i++){
 
-            int num = Integer.parseInt(arr[i]);
+        // Remove duplicated values from the array
+        int[] uniqueArr = new int[arr.length];
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
 
-            useThisArray[i] = num;
+            for (int j = 0; j < count; j++) {
+                if (arr[i] != uniqueArr[j]) {
 
-        }
+                    count=arr[i];
+
+                }
+            }
+
+
+
+            //int num = Integer.parseInt(arr[i]);
+
+
+          //  useThisArray[i] = num;
+
+
+        //System.out.println(top);
 
         // code start here
         // dont change anything before this line
@@ -57,8 +74,8 @@ public class removeDuplicates {
 
         // kodu burdan baslatin ve bu satirdan onceki kodlari degistirmeyin
         //   useThisLine arrayini kullan
+        }
+        System.out.println(count);
 
     }
-
-
 }
