@@ -48,8 +48,22 @@ public class diffBetweenMaxMin {
     // Your code start here. Don't remove or change anything before this line. Your array is -> useThisArray in line 27
     //   kodu burdan baslatin ve bu satirdan onceki kodlari degistirmeyin Kullanacağınız array 27.ci satırda  --> useThisArray
 
+        System.out.println(bigdiff(useThisArray));
 
     }
+
+    public static int bigdiff(int[] nums) {
+        int max =nums[0];
+        int min =nums[0];
+
+        for (int i = 0; i < nums.length ; i++) {
+            min= Math.min(min,nums[i]);
+            max= Math.max(max,nums[i]);
+        }
+
+        return max-min;
+    }
+
 
 }
 
