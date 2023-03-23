@@ -37,10 +37,13 @@ public class sameFirstAndLast {
         String[] useThisArray = myStr.split(" ");
 
         // kodu burdan baslatin ve bu satirdan onceki kodlari degistirmeyin
+        System.out.println(sameFirstLast(useThisArray));
 
 
+    }
 
-
+    private static boolean sameFirstLast(String[] nums) {
+        return (nums.length >= 1 && nums[0] == nums[nums.length - 1]);
     }
 
 
