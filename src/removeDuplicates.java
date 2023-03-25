@@ -36,37 +36,36 @@ public class removeDuplicates {
     */
     public static void main(String[] args) {
 
-      //  Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-       // String myStr = scan.nextLine();
+        String myStr = "1 2 2 2 3 3 3 4 4 4 5 5 5";
 
-       // String[] arr = myStr.split(" ");
+        String[] arr = myStr.split(" ");
 
-        int[] arr = {1,2,2,2,3,3,3,4,4,4,5,5,5};
+        int[] useThisArray = new int[arr.length];
+        ArrayList<Integer>liste1=new ArrayList<>();
+
+        int top=0;
+
+        for(int i = 0 ; i < useThisArray.length ; i++){
+
+            int num = Integer.parseInt(arr[i]);
+
+            useThisArray[i] = num;
 
 
-        // Remove duplicated values from the array
-        int[] uniqueArr = new int[arr.length];
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
 
-            for (int j = 0; j < count; j++) {
-                if (arr[i] != uniqueArr[j]) {
-
-                    count=arr[i];
-
-                }
+            if (!liste1.contains(useThisArray[i])){
+                top++;
+                liste1.add(useThisArray[i]);
             }
 
 
 
-            //int num = Integer.parseInt(arr[i]);
+        }
+        System.out.println(top);
+        System.out.println(liste1);
 
-
-          //  useThisArray[i] = num;
-
-
-        //System.out.println(top);
 
         // code start here
         // dont change anything before this line
@@ -74,8 +73,8 @@ public class removeDuplicates {
 
         // kodu burdan baslatin ve bu satirdan onceki kodlari degistirmeyin
         //   useThisLine arrayini kullan
-        }
-        System.out.println(count);
+
+
 
     }
 }
