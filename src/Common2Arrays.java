@@ -50,6 +50,15 @@ public class Common2Arrays {
         // array1 and array2  kullan
 
 
+        System.out.println("commonEnd(array1, array2) = " + commonEnd(array1, array2));
+
+
+    }
+
+    private static boolean commonEnd(int[] array1, int[] array2) {
+        if (array1[0] == array2[0]  || array1[array1.length - 1] == array2[array2.length-1]){
+            return true;
+        }else return false;
     }
 
 }
