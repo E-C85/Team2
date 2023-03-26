@@ -32,7 +32,13 @@ public class reverseArr {
         // kodu burdan baslatin ve bu satirdan onceki kodlari degistirmeyin
 
 
+        String[] reversed = new String[useThisArray.length];
 
+        int counter = 0;
+        for (int i = useThisArray.length; i <= 0; i--) {
+            reversed[counter++] = useThisArray[i];
+        }
+        System.out.println(Arrays.toString(reversed));
 
     }
 
